@@ -431,7 +431,7 @@ class Xgid {
   }
 
   _isBearIn() {
-    for (let q = 7; q <= 21; q++) {
+    for (let q = 6; q <= 21; q++) {
       if (this.existMyChequer(q)) { return false; }
     }
     return true;
@@ -501,7 +501,7 @@ class Xgid {
     return usabledice.sort(); //ベアオフで後ろから使うように昇順にしておく
   }
 
-  initialize(pos="--------------------------", newmatch=false, matchlen=0) {
+  initialize(pos="----------------------", newmatch=false, matchlen=0) {
     this.position = pos;
     this.matchsc  = matchlen;
     this.sc_me    = (newmatch) ? 0: this.sc_me;

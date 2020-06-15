@@ -65,15 +65,6 @@ class BgBoard {
     this.svgDice[5] += '<circle cx="132" cy="48" r="8" stroke-width="18"/>';
     this.svgDice[5] += '<circle cx="132" cy="132" r="8" stroke-width="18"/>';
     this.svgDice[5] += '</svg>';
-//    this.svgDice[6]  = '<svg class="dice-six" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180">';
-//    this.svgDice[6] += '<rect x="7" y="7" rx="30" width="166" height="166" stroke-width="1"/>';
-//    this.svgDice[6] += '<circle cx="48" cy="48" r="8" stroke-width="18"/>';
-//    this.svgDice[6] += '<circle cx="48" cy="132" r="8" stroke-width="18"/>';
-//    this.svgDice[6] += '<circle cx="48" cy="90" r="8" stroke-width="18"/>';
-//    this.svgDice[6] += '<circle cx="132" cy="48" r="8" stroke-width="18"/>';
-//    this.svgDice[6] += '<circle cx="132" cy="90" r="8" stroke-width="18"/>';
-//    this.svgDice[6] += '<circle cx="132" cy="132" r="8" stroke-width="18"/>';
-//    this.svgDice[6] += '</svg>';
   }
 
   setDomNameAndStyle() {
@@ -487,7 +478,7 @@ console.log("animateChequer ZINDEX", 50+num);
                          0,  1,  2,  3,  4,  6,  7,  8,  9, 10,  5, 11];
     } else {
       this.pointX = [6, 11, 10,  9,  8,  7,  5,  4,  3,  2,  1,
-                         1,  2,  3,  4,  5,  7,  8,  9, 10, 11,  5, 12];
+                         1,  2,  3,  4,  5,  7,  8,  9, 10, 11,  6, 12];
     }
     for (let i=0; i< this.pointX.length; i++) {
       this.pointX[i] *= this.pointWidth;
