@@ -355,7 +355,6 @@ class BgBoard {
     const duration = (hitflag) ? delay/2 : delay;
     this.chequer[ckerowner][idx].point = toabs;
     this.chequer[ckerowner][idx].stackidx = num;
-console.log("animateChequer ZINDEX", 50+num);
     const promise = this.chequer[ckerowner][idx].dom.css({"z-index": 50 + num}).animate(toPosition, duration).promise();
     this.showStackInfo(sf, toabs, num, toPosition, ckerowner);
 
@@ -547,7 +546,6 @@ console.log("animateChequer ZINDEX", 50+num);
     const py = Math.floor(pos.top / this.mainBoardHeight * 2);
     const pt = pos2ptz[px + py * 12];
 
-console.log("getDragEndPoint", pos, this.pointWidth, px, py, px+py*14, pt, player);
     if (pt == 0 || pt == 21) { return pt; }
     else {
       return (player == 1) ? pt : 21 - pt;
@@ -558,22 +556,18 @@ console.log("getDragEndPoint", pos, this.pointWidth, px, py, px+py*14, pt, playe
     const chker = this.chequer[player].find(elem => elem.domid == id);
     const pt = chker.point;
     const p = (player == 1) ? pt : 21 - pt;
-console.log("getDragStartPoint", id, player, pt);
     return p;
   }
 
   getChequerOnDragging(pt, player) {
     const aryreverse = this.chequer[player].reverse();
     const chker = aryreverse.find(elem => elem.point == pt); //一番上の(最後の)チェッカーを返す
-    //const chker = this.chequer[player].find(elem => elem.point == pt);
-console.log("getChequerOnDragging", pt, player, chker);
     return chker;
   }
 
   getChequerHitted(ptt, player) {
     const pt = (player == 1) ? 21 - ptt : ptt;
     const chker = this.chequer[player].find(elem => elem.point == pt);
-console.log("getOppoChequerAndGotoBar", ptt, pt, player, chker);
     return chker;
   }
 

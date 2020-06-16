@@ -2,7 +2,7 @@
 // (参考) https://qiita.com/kaihar4/items/c09a6d73e190ab0b9b01
 'use strict';
 
-const CACHE_NAME = "ShortGammon-v1"; //v1=first release, v2=no use jquery.ui
+const CACHE_NAME = "ShortGammon-v2.0"; //v1=first release, v2=remove debug console
 const ORIGIN = (location.hostname == 'localhost') ? '' : location.protocol + '//' + location.hostname;
 
 const STATIC_FILES = [
@@ -19,7 +19,7 @@ const STATIC_FILES = [
   ORIGIN + '/css/font-awesome-animation.min.css',
   ORIGIN + '/js/fontawesome-all.min.js',
   ORIGIN + '/js/jquery-3.4.1.min.js',
-  ORIGIN + '/ShortGammon/js/inobounce.min.js',
+  ORIGIN + '/js/inobounce.min.js',
   ORIGIN + '/ShortGammon/js/BgBoard_class.js',
   ORIGIN + '/ShortGammon/js/BgChequer_class.js',
   ORIGIN + '/ShortGammon/js/BgXgid_class.js',
